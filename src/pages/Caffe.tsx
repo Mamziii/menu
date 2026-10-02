@@ -9,7 +9,7 @@ const coffeMenu = [
     title: "اسپرسو",
     category: "قهوه",
     price: "۸۵,۰۰۰",
-    img: "/images/espresso.jpg",
+    img: "/coffe/espresso.png",
     desc: "اسپرسو خالص و غلیظ با عطر قوی دانه‌های تازه رست‌شده",
   },
   {
@@ -17,7 +17,7 @@ const coffeMenu = [
     title: "کاپوچینو",
     category: "قهوه",
     price: "۱۱۵,۰۰۰",
-    img: "/images/cappuccino.jpg",
+    img: "/coffe/cappuccino.png",
     desc: "اسپرسو + شیر بخارداده شده با لایه‌ای از فوم مخملی",
   },
   {
@@ -25,7 +25,7 @@ const coffeMenu = [
     title: "لاته",
     category: "قهوه",
     price: "۱۲۰,۰۰۰",
-    img: "/images/latte.jpg",
+    img: "/coffe/latte.png",
     desc: "ترکیب ملایم اسپرسو و شیر داغ با هنر لته آرت",
   },
   {
@@ -33,7 +33,7 @@ const coffeMenu = [
     title: "چای ماسالا",
     category: "چای",
     price: "۹۵,۰۰۰",
-    img: "/images/masala.jpg",
+    img: "/coffe/masala.png",
     desc: "چای سیاه با ادویه‌های گرم هندی و شیر",
   },
   {
@@ -41,7 +41,7 @@ const coffeMenu = [
     title: "چای سبز",
     category: "چای",
     price: "۷۵,۰۰۰",
-    img: "/images/green-tea.jpg",
+    img: "/coffe/greentea.png",
     desc: "چای سبز خالص و تازه با عطر طبیعی",
   },
   {
@@ -49,7 +49,7 @@ const coffeMenu = [
     title: "کیک شکلاتی",
     category: "دسر",
     price: "۱۴۵,۰۰۰",
-    img: "/images/chocolate-cake.jpg",
+    img: "/coffe/chocolatecake.png",
     desc: "کیک شکلاتی مرطوب با گاناش تلخ و توت‌فرنگی تازه",
   },
   {
@@ -57,7 +57,7 @@ const coffeMenu = [
     title: "چیزکیک",
     category: "دسر",
     price: "۱۵۵,۰۰۰",
-    img: "/images/cheesecake.jpg",
+    img: "/coffe/cheesecake.png",
     desc: "چیزکیک خامه‌ای با سس توت‌فرنگی خانگی",
   },
   {
@@ -65,7 +65,7 @@ const coffeMenu = [
     title: "صبحانه انگلیسی",
     category: "صبحانه",
     price: "۲۸۵,۰۰۰",
-    img: "/images/english-breakfast.jpg",
+    img: "/coffe/englandbreakfast.jpg",
     desc: "تخم‌مرغ، بیکن، سوسیس، لوبیا، نان تست و قارچ",
   },
   {
@@ -73,7 +73,7 @@ const coffeMenu = [
     title: "املت سبزیجات",
     category: "صبحانه",
     price: "۱۶۵,۰۰۰",
-    img: "/images/omelette.jpg",
+    img: "/coffe/vegtableomlet.jpg",
     desc: "املت تازه با سبزیجات فصل و پنیر",
   },
 ];
@@ -135,14 +135,14 @@ export default function Caffe() {
           {allMenus.map((menu) => (
             <article
               key={menu.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-amber-100/60 transition-all duration-300 hover:-translate-y-1"
+              className="bg-white rounded-2xl overflow-hidden shadow-md border border-amber-100/60"
             >
               {/* تصویر */}
               <div className="relative h-48 sm:h-52 overflow-hidden">
                 <img
                   src={menu.img}
                   alt={menu.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute top-3 left-3 bg-amber-600 text-white text-xs font-medium px-3 py-1 rounded-full">
                   {menu.category}

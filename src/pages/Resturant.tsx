@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { UtensilsCrossed } from "lucide-react";
 
-
 const resturantMenu = [
   {
     id: 1,
     title: "چیزبرگر کلاسیک",
     category: "برگر",
     price: "۲۴۵,۰۰۰",
-    img: "/images/cheeseburger.jpg",
+    img: "/resturant/cheeseburger.png",          // ← مسیر درست
     desc: "گوشت ۱۰۰٪ گوساله، پنیر چدار، کاهو، گوجه و سس مخصوص پاییزان",
   },
   {
@@ -16,7 +15,7 @@ const resturantMenu = [
     title: "دبل اسموکی برگر",
     category: "برگر",
     price: "۳۱۵,۰۰۰",
-    img: "/images/double-burger.jpg",
+    img: "/resturant/DoubleSmokyBurger.png",     // ← مسیر درست
     desc: "دو لایه گوشت دودی، پنیر، پیاز کاراملی و سس باربیکیو",
   },
   {
@@ -24,7 +23,7 @@ const resturantMenu = [
     title: "چیکن برگر",
     category: "برگر",
     price: "۲۲۵,۰۰۰",
-    img: "/images/chicken-burger.jpg",
+    img: "/resturant/chickenburger.png",
     desc: "فیله مرغ سوخاری، کاهو، خیارشور و سس مایو مخصوص",
   },
   {
@@ -32,7 +31,7 @@ const resturantMenu = [
     title: "پیتزا پپرونی",
     category: "پیتزا",
     price: "۲۸۵,۰۰۰",
-    img: "/images/pepperoni.jpg",
+    img: "/resturant/peperoni.png",
     desc: "خمیر تازه، سس گوجه، پنیر موزارلا و پپرونی تند",
   },
   {
@@ -40,23 +39,23 @@ const resturantMenu = [
     title: "پیتزا مارگاریتا",
     category: "پیتزا",
     price: "۲۴۵,۰۰۰",
-    img: "/images/margherita.jpg",
+    img: "/resturant/margherita.png",
     desc: "گوجه تازه، ریحان، پنیر موزارلا و روغن زیتون فرابکر",
   },
   {
     id: 6,
-    title: "پیتزا چهار فصل",
+    title: "پیتزا مرغ",
     category: "پیتزا",
     price: "۳۲۵,۰۰۰",
-    img: "/images/quattro.jpg",
-    desc: "قارچ، ژامبون، فلفل دلمه‌ای، زیتون و پنیر اضافه",
+    img: "/resturant/chicken-pizza.png",
+    desc: "قارچ، مرغ فلفل دلمه‌ای، زیتون و پنیر اضافه",
   },
   {
     id: 7,
     title: "ساندویچ رست بیف",
     category: "ساندویچ",
     price: "۲۶۵,۰۰۰",
-    img: "/images/roast-beef.jpg",
+    img: "/resturant/roast-beef.png",
     desc: "گوشت رست‌شده، پنیر سوئیسی، پیاز و سس خردل عسلی",
   },
   {
@@ -64,7 +63,7 @@ const resturantMenu = [
     title: "هات داگ ویژه",
     category: "ساندویچ",
     price: "۱۸۵,۰۰۰",
-    img: "/images/hotdog.jpg",
+    img: "/resturant/special-hotdog.png",
     desc: "هات‌داگ دودی، پیاز سرخ‌شده، خردل و کچاپ",
   },
   {
@@ -72,7 +71,7 @@ const resturantMenu = [
     title: "سیب‌زمینی سرخ‌کرده",
     category: "پیش‌غذا",
     price: "۹۵,۰۰۰",
-    img: "/images/fries.jpg",
+    img: "/resturant/frechfries.png",
     desc: "سیب‌زمینی ترد با سس کچاپ و مایونز",
   },
   {
@@ -80,7 +79,7 @@ const resturantMenu = [
     title: "ناگت مرغ",
     category: "پیش‌غذا",
     price: "۱۴۵,۰۰۰",
-    img: "/images/nuggets.jpg",
+    img: "/resturant/chicken-nuggets.png",
     desc: "۱۰ عدد ناگت طلایی با سس Barbecue",
   },
   {
@@ -88,12 +87,12 @@ const resturantMenu = [
     title: "سالاد سزار",
     category: "پیش‌غذا",
     price: "۱۶۵,۰۰۰",
-    img: "/images/caesar.jpg",
+    img: "/resturant/caesar.png",
     desc: "کاهو رومی، مرغ گریل، نان تست، پنیر پارمزان و سس سزار",
   },
 ];
 
-const allCategories = ["همه", ...new Set(resturantMenu.map((menu) => menu.category))];resturantMenu
+const allCategories = ["همه", ...new Set(resturantMenu.map((menu) => menu.category))];
 
 export default function Resturant() {
   const [allMenus, setAllMenus] = useState(resturantMenu);
@@ -113,7 +112,7 @@ export default function Resturant() {
     <main className="bg-linear-to-b from-amber-50 via-orange-50/30 to-amber-50 min-h-screen">
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         
-        {/* page title */}
+        {/* عنوان صفحه */}
         <div className="text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-linear-to-br from-amber-500 to-orange-600 shadow-lg mb-4">
             <UtensilsCrossed className="w-7 h-7 text-white" strokeWidth={2} />
@@ -127,7 +126,7 @@ export default function Resturant() {
           </p>
         </div>
 
-        {/* category btns */}
+        {/* دکمه‌های دسته‌بندی */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12">
           {allCategories.map((category) => (
             <button
@@ -145,26 +144,26 @@ export default function Resturant() {
           ))}
         </div>
 
-        {/* menu items */}
+        {/* list items */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {allMenus.map((menu) => (
             <article
               key={menu.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-amber-100/60 transition-all duration-300 hover:-translate-y-1"
+              className="bg-white rounded-2xl overflow-hidden shadow-md border-amber-100/60"
             >
-              {/* image */}
-              <div className="relative h-48 sm:h-52 overflow-hidden">
+              
+              <div className="relative h-56 sm:h-60 md:h-64 overflow-hidden bg-amber-50">
                 <img
                   src={menu.img}
                   alt={menu.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute top-3 left-3 bg-amber-600 text-white text-xs font-medium px-3 py-1 rounded-full">
+                <div className="absolute top-3 left-3 bg-amber-600 text-white text-xs font-medium px-3 py-1 rounded-full shadow">
                   {menu.category}
                 </div>
               </div>
 
-              {/* details */}
+              {/* جزئیات */}
               <div className="p-5">
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <h3 className="text-lg font-bold text-amber-900 leading-tight">
@@ -182,7 +181,6 @@ export default function Resturant() {
           ))}
         </div>
 
-        
         {allMenus.length === 0 && (
           <div className="text-center py-16">
             <p className="text-amber-800/60 text-lg">آیتمی در این دسته یافت نشد</p>
