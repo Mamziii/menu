@@ -33,7 +33,7 @@ export default function Header() {
           {/* links */}
           <nav className="flex items-center gap-1.5 sm:gap-2.5">
             <Link
-              to="/caffe"
+              to="/coffe"
               className="flex items-center gap-1 sm:gap-1.5 
                          px-2.5 sm:px-4 md:px-5 
                          py-1.5 sm:py-2 md:py-2.5 

@@ -4,7 +4,7 @@ import Resturant from "./pages/Resturant";
 
 const routes = [
   { path: "/", element: <Home /> },
-  { path: "/caffe", element: <Caffe /> },
+  { path: "/coffe", element: <Caffe /> },
   { path: "/fastfood", element: <Resturant /> },
 ];
 
